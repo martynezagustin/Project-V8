@@ -1,0 +1,65 @@
+.animacion-h1{
+    animation-name: animacion-h1;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    @keyframes animacion-h1 {
+        0%{
+
+        }
+        50%{
+            color: red;
+        }
+        75%{
+            color: $rojo-v8;
+        }
+    }
+}
+
+.animacion-header{
+    animation-name: animacion-header;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-timing-function: ease-in;
+    @keyframes animacion-header {
+        0%{
+            background-color: $rojo-v8;
+        }
+        50%{
+            background-color: rgb(255,40,40);
+        }
+        75%{
+            background-color: rgb(255,10,10);
+        }
+        100%{
+            background-color: $rojo-v8;
+        }
+    }
+}
+
+.animacion-h2-historia{
+    animation-name: moverse;
+            animation-timing-function: ease-in;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            @keyframes moverse {
+                0%{
+                    color: whitesmoke;
+                    transform: skew(0deg, 0deg)
+                }
+                25%{
+                    transform: skew(0.5deg, 0.3deg);
+                }
+                50%{
+                    color: rgb(255,50,50);
+                    transform: skew(1deg, 0.2deg)
+                }
+                75%{
+                    transform: skew(0.5deg, 0.1deg)
+                }
+                100%{
+                    color: whitesmoke;
+                    transform: skew(0deg, 0deg)
+                }
+
+            }
+}

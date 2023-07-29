@@ -1,0 +1,419 @@
+@import "colors";
+@import "font-sizes";
+@import "animations";
+@import "box-sizing";
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+p {
+    font-size: $p-xl;
+}
+
+.V8-span {
+    color: $rojo-v8;
+}
+
+.card-body{
+    background-color: $negro-v8;
+    .card-title{
+        color: white;
+    }
+    .card-text{
+        color: white;
+    }
+}
+
+.body {
+    display: grid;
+    grid-template: "header" auto
+        "main" auto
+        "sidebar-1" auto
+        "footer" auto /
+        100%;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.header {
+    grid-area: header;
+    background-color: $rojo-v8;
+    font-family: 'Bebas Neue', sans-serif;
+    @extend .animacion-header;
+
+    #containerTragos{
+        .p-rojo{
+            color: $rojo-v8;
+        }
+    }
+
+    .navbar-toggler {
+        background-color: whitesmoke;
+    }
+
+    .navbar-brand {
+        color: white;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            color: white;
+            font-size: 1.2em;
+
+            &.active,
+            &.show {
+                color: whitesmoke;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.main {
+    display: grid;
+    grid-template: "intro-v8" 400px
+        "profits-v8" auto
+        "tragos-v8" auto
+        "catalogo-v8" auto;
+
+    .intro-v8 {
+        grid-area: intro-v8;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../assets/imgs/experiencia-v8.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        .intro-v8__h1 {
+            color: whitesmoke;
+            font-size: $h1-xl;
+            word-wrap: break-word;
+            max-width: 100%;
+            @extend .animacion-h1;
+        }
+
+        .intro-v8__p {
+            color: whitesmoke;
+        }
+    }
+
+    .profits-v8 {
+        grid-area: profits-v8;
+
+        .profits-v8__h2 {
+            font-size: $h2-xl;
+        }
+
+        .col {
+            box-shadow: 0px 0px 15px 2px gray;
+            border-radius: 10px;
+            margin: $margenes + 3;
+            font-family: 'Roboto', sans-serif;
+
+            &:hover {
+                box-shadow: 0px 0px 12px 1px black;
+                transition: 2s;
+            }
+
+            .profits-v8__h3 {
+                color: $rojo-v8;
+                font-size: $h3-xl;
+                text-decoration: underline solid $negro-v8 2px;
+                font-family: 'Bebas Neue', sans-serif;
+
+                &:hover {
+                    color: red;
+                    transition: .5s all;
+                    text-decoration: none;
+                }
+            }
+
+            .profits-v8__p {
+                font-weight: 300;
+                font-size: 1.6em;
+            }
+
+            .profits-v8__imgs {
+                width: 20%;
+            }
+        }
+    }
+
+    .carouseles-v8 {
+        grid-area: "tragos-v8";
+
+        .carouseles-v8__h2 {
+            font-size: $h2-xl;
+        }
+    }
+
+    .historia-v8 {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../assets/imgs/historia.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 15px 1px;
+        .historia-v8__h2 {
+            color: whitesmoke;
+            font-size: $h2-xl;
+            @extend .animacion-h2-historia;
+        }
+
+        .historia-v8__p {
+            color: whitesmoke;
+            font-family: 'Roboto', sans-serif;
+            width: 50%;
+        }
+    }
+
+    .catalogo-v8 {
+        grid-area: "catalogo-v8";
+        .catalogo-v8__h2 {
+            font-size: $h2-xl;
+        }
+        #catalogo-v8__div{
+            display: grid;
+            grid-gap: 21px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+        }
+    }
+    
+    
+}
+
+.footer {
+    grid-area: footer;
+    background-color: $negro-v8;
+    color: whitesmoke;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    p {
+        font-size: $p-lg;
+    }
+
+    .main {
+        .intro-v8 {
+            grid-area: intro-v8;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../assets/imgs/experiencia-v8.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .intro-v8__h1 {
+                color: whitesmoke;
+                font-size: $h1-lg;
+            }
+
+            .intro-v8__p {
+                color: whitesmoke;
+            }
+        }
+
+        .profits-v8 {
+
+            .row {
+                display: flex;
+                flex-direction: column;
+
+                .col {
+                    margin: $margenes + 0.5;
+
+                    .profits-v8__h3 {
+                        font-size: $h3-lg;
+                    }
+
+                    .profits-v8__p {
+                        font-weight: 300;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+
+        .carouseles-v8 {
+        }
+
+        .historia-v8 {
+            .historia-v8__p {
+                width: 100%;
+            }
+        }
+
+        .catalogo-v8 {
+            .catalogo-v8__h2 {
+            }
+            #catalogo-v8__div{
+                grid-template-columns: 2fr 2fr;
+                grid-gap: 10px;
+                justify-items: center;
+            }
+        }
+    }
+
+
+
+}
+
+@media (max-width: 576px) {
+    p {
+        font-size: $p-md;
+    }
+
+    .main {
+        .intro-v8 {
+            grid-area: intro-v8;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../assets/imgs/experiencia-v8.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            .intro-v8__h1 {
+                color: whitesmoke;
+                font-size: $h1-md;
+            }
+
+            .intro-v8__p {
+                color: whitesmoke;
+            }
+        }
+
+        .profits-v8 {
+            grid-area: profits-v8;
+
+            .row {
+                display: flex;
+                flex-direction: column;
+
+                .align-items-center {
+                    align-items: none;
+                }
+
+                .col {
+                    margin: 24px 0px 0px 0px;
+                    box-shadow: 0px 0px 0px 0px;
+
+                    .profits-v8__h3 {
+                        font-size: $h3-md;
+                    }
+
+                    .profits-v8__p {
+                        font-weight: 300;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+
+            .col {
+                box-shadow: 0px 0px 15px 2px gray;
+
+                .profits-v8__h3 {
+                    color: $rojo-v8;
+                    font-size: $h3-xl;
+                    text-decoration: underline solid $negro-v8 2px;
+                }
+
+                .profits-v8__imgs {
+                    width: 50%;
+                }
+            }
+        }
+
+        .carouseles-v8 {
+            grid-area: "tragos-v8";
+        }
+
+        .historia-v8 {
+            .historia-v8__p {
+                width: 100%;
+            }
+        }
+
+        .catalogo-v8 {
+            #catalogo-v8__div{
+                grid-template-columns: 4fr;
+                justify-items: center;
+            }
+        }
+
+    }
+}
+
+
+
+
+//MEDIAS H1 Y ALGUNA Q OTRA COSA
+@media (max-width: 325px) {
+    .main {
+        .intro-v8 {
+            .intro-v8__h1 {
+                font-size: 3.1em;
+                word-wrap: break-word;
+            }
+        }
+
+        .profits-v8 {
+
+            .row {
+                display: flex;
+                flex-direction: column;
+
+                .col {
+                    box-shadow: none;
+
+                    .profits-v8__h3 {
+                        font-size: $h3-md;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 217px) {
+    p {
+        font-size: $p-extra-small;
+    }
+
+    .main {
+        .intro-v8 {
+            .intro-v8__h1 {
+                font-size: 2.8em;
+                word-break: break-all;
+            }
+        }
+
+        .profits-v8 {
+            .profits-v8__h2 {
+                font-size: $h2-extra-small;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+
+                .col {
+                    box-shadow: none;
+                    border-radius: 0px;
+                    border-bottom: 1px solid $negro-v8;
+
+                    .profits-v8__h3 {
+                        font-size: $h3-md;
+                    }
+                }
+            }
+        }
+
+        .carouseles-v8 {
+            grid-area: "tragos-v8";
+
+            .carouseles-v8__h2 {
+                font-size: $h2-extra-small;
+            }
+        }
+    }
+}

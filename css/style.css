@@ -1,0 +1,362 @@
+.animacion-h1, .main .intro-v8 .intro-v8__h1 {
+  animation-name: animacion-h1;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+@keyframes animacion-h1 {
+  50% {
+    color: red;
+  }
+  75% {
+    color: rgb(119, 39, 39);
+  }
+}
+
+.animacion-header, .header {
+  animation-name: animacion-header;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+  animation-timing-function: ease-in;
+}
+@keyframes animacion-header {
+  0% {
+    background-color: rgb(119, 39, 39);
+  }
+  50% {
+    background-color: rgb(255, 40, 40);
+  }
+  75% {
+    background-color: rgb(255, 10, 10);
+  }
+  100% {
+    background-color: rgb(119, 39, 39);
+  }
+}
+
+.animacion-h2-historia, .main .historia-v8 .historia-v8__h2 {
+  animation-name: moverse;
+  animation-timing-function: ease-in;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes moverse {
+  0% {
+    color: whitesmoke;
+    transform: skew(0deg, 0deg);
+  }
+  25% {
+    transform: skew(0.5deg, 0.3deg);
+  }
+  50% {
+    color: rgb(255, 50, 50);
+    transform: skew(1deg, 0.2deg);
+  }
+  75% {
+    transform: skew(0.5deg, 0.1deg);
+  }
+  100% {
+    color: whitesmoke;
+    transform: skew(0deg, 0deg);
+  }
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+p {
+  font-size: 1.7em;
+}
+
+.V8-span {
+  color: rgb(119, 39, 39);
+}
+
+.card-body {
+  background-color: rgb(50, 50, 50);
+}
+.card-body .card-title {
+  color: white;
+}
+.card-body .card-text {
+  color: white;
+}
+
+.body {
+  display: grid;
+  grid-template: "header" auto "main" auto "sidebar-1" auto "footer" auto/100%;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(119, 39, 39);
+  font-family: "Bebas Neue", sans-serif;
+}
+.header #containerTragos .p-rojo {
+  color: rgb(119, 39, 39);
+}
+.header .navbar-toggler {
+  background-color: whitesmoke;
+}
+.header .navbar-brand {
+  color: white;
+}
+.header .navbar-nav .nav-link {
+  color: white;
+  font-size: 1.2em;
+}
+.header .navbar-nav .nav-link.active, .header .navbar-nav .nav-link.show {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.main {
+  display: grid;
+  grid-template: "intro-v8" 400px "profits-v8" auto "tragos-v8" auto "catalogo-v8" auto;
+}
+.main .intro-v8 {
+  grid-area: intro-v8;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../assets/imgs/experiencia-v8.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.main .intro-v8 .intro-v8__h1 {
+  color: whitesmoke;
+  font-size: 7em;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+.main .intro-v8 .intro-v8__p {
+  color: whitesmoke;
+}
+.main .profits-v8 {
+  grid-area: profits-v8;
+}
+.main .profits-v8 .profits-v8__h2 {
+  font-size: 2.9em;
+}
+.main .profits-v8 .col {
+  box-shadow: 0px 0px 15px 2px gray;
+  border-radius: 10px;
+  margin: 12px;
+  font-family: "Roboto", sans-serif;
+}
+.main .profits-v8 .col:hover {
+  box-shadow: 0px 0px 12px 1px black;
+  transition: 2s;
+}
+.main .profits-v8 .col .profits-v8__h3 {
+  color: rgb(119, 39, 39);
+  font-size: 2.4em;
+  text-decoration: underline solid rgb(50, 50, 50) 2px;
+  font-family: "Bebas Neue", sans-serif;
+}
+.main .profits-v8 .col .profits-v8__h3:hover {
+  color: red;
+  transition: 0.5s all;
+  text-decoration: none;
+}
+.main .profits-v8 .col .profits-v8__p {
+  font-weight: 300;
+  font-size: 1.6em;
+}
+.main .profits-v8 .col .profits-v8__imgs {
+  width: 20%;
+}
+.main .carouseles-v8 {
+  grid-area: "tragos-v8";
+}
+.main .carouseles-v8 .carouseles-v8__h2 {
+  font-size: 2.9em;
+}
+.main .historia-v8 {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../assets/imgs/historia.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px 1px;
+}
+.main .historia-v8 .historia-v8__h2 {
+  color: whitesmoke;
+  font-size: 2.9em;
+}
+.main .historia-v8 .historia-v8__p {
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+  width: 50%;
+}
+.main .catalogo-v8 {
+  grid-area: "catalogo-v8";
+}
+.main .catalogo-v8 .catalogo-v8__h2 {
+  font-size: 2.9em;
+}
+.main .catalogo-v8 #catalogo-v8__div {
+  display: grid;
+  grid-gap: 21px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(50, 50, 50);
+  color: whitesmoke;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  p {
+    font-size: 1.5em;
+  }
+  .main .intro-v8 {
+    grid-area: intro-v8;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../assets/imgs/experiencia-v8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main .intro-v8 .intro-v8__h1 {
+    color: whitesmoke;
+    font-size: 5.4em;
+  }
+  .main .intro-v8 .intro-v8__p {
+    color: whitesmoke;
+  }
+  .main .profits-v8 .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .profits-v8 .row .col {
+    margin: 9.5px;
+  }
+  .main .profits-v8 .row .col .profits-v8__h3 {
+    font-size: 2.7em;
+  }
+  .main .profits-v8 .row .col .profits-v8__p {
+    font-weight: 300;
+    font-size: 1.4em;
+  }
+  .main .historia-v8 .historia-v8__p {
+    width: 100%;
+  }
+  .main .catalogo-v8 #catalogo-v8__div {
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 10px;
+    justify-items: center;
+  }
+}
+@media (max-width: 576px) {
+  p {
+    font-size: 1.4em;
+  }
+  .main .intro-v8 {
+    grid-area: intro-v8;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../assets/imgs/experiencia-v8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main .intro-v8 .intro-v8__h1 {
+    color: whitesmoke;
+    font-size: 4.3em;
+  }
+  .main .intro-v8 .intro-v8__p {
+    color: whitesmoke;
+  }
+  .main .profits-v8 {
+    grid-area: profits-v8;
+  }
+  .main .profits-v8 .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .profits-v8 .row .align-items-center {
+    align-items: none;
+  }
+  .main .profits-v8 .row .col {
+    margin: 24px 0px 0px 0px;
+    box-shadow: 0px 0px 0px 0px;
+  }
+  .main .profits-v8 .row .col .profits-v8__h3 {
+    font-size: 1.9em;
+  }
+  .main .profits-v8 .row .col .profits-v8__p {
+    font-weight: 300;
+    font-size: 1.1em;
+  }
+  .main .profits-v8 .col {
+    box-shadow: 0px 0px 15px 2px gray;
+  }
+  .main .profits-v8 .col .profits-v8__h3 {
+    color: rgb(119, 39, 39);
+    font-size: 2.4em;
+    text-decoration: underline solid rgb(50, 50, 50) 2px;
+  }
+  .main .profits-v8 .col .profits-v8__imgs {
+    width: 50%;
+  }
+  .main .carouseles-v8 {
+    grid-area: "tragos-v8";
+  }
+  .main .historia-v8 .historia-v8__p {
+    width: 100%;
+  }
+  .main .catalogo-v8 #catalogo-v8__div {
+    grid-template-columns: 4fr;
+    justify-items: center;
+  }
+}
+@media (max-width: 325px) {
+  .main .intro-v8 .intro-v8__h1 {
+    font-size: 3.1em;
+    word-wrap: break-word;
+  }
+  .main .profits-v8 .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .profits-v8 .row .col {
+    box-shadow: none;
+  }
+  .main .profits-v8 .row .col .profits-v8__h3 {
+    font-size: 1.9em;
+  }
+}
+@media (max-width: 217px) {
+  p {
+    font-size: 1.3em;
+  }
+  .main .intro-v8 .intro-v8__h1 {
+    font-size: 2.8em;
+    word-break: break-all;
+  }
+  .main .profits-v8 .profits-v8__h2 {
+    font-size: 1.8em;
+  }
+  .main .profits-v8 .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .profits-v8 .row .col {
+    box-shadow: none;
+    border-radius: 0px;
+    border-bottom: 1px solid rgb(50, 50, 50);
+  }
+  .main .profits-v8 .row .col .profits-v8__h3 {
+    font-size: 1.9em;
+  }
+  .main .carouseles-v8 {
+    grid-area: "tragos-v8";
+  }
+  .main .carouseles-v8 .carouseles-v8__h2 {
+    font-size: 1.8em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
